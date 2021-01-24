@@ -1,4 +1,4 @@
-### GC and Heap
+### GCLogAnalysis and Heap
 
 ### 1. ParallelGC
 
@@ -8,17 +8,17 @@
 >
 > 设置内存大时,吞吐率反而降低
 
-### 2. CMS GC
+### 2. CMS GCLogAnalysis
 
 > 采用并发模式的标记清除的GC
 >
 > JDK10 之后被G1 替代
 
-### 3. G1 GC
+### 3. G1 GCLogAnalysis
 
 >采用块状分区, 不以新生代与老年代 为顺序分界内存地址, 延迟较低
 >
->在内存较大时,使用G1 GC 优势比较大
+>在内存较大时,使用G1 GCLogAnalysis 优势比较大
 
 
 
@@ -34,5 +34,5 @@
 
 ### 5. Summmary
 
->1. 相同堆大小的情况下，平均Young GC的时间: Serial GC > Parallel GC > CMS GC > G1 GC(ZGC 和 Shennandoah GC还没有测试)
+>1. 相同堆大小的情况下，平均Young GC的时间: Serial GCLogAnalysis > Parallel GCLogAnalysis > CMS GCLogAnalysis > G1 GCLogAnalysis(ZGC 和 Shennandoah GC还没有测试)
 >2. 堆越大，分配给Young区的空间越大，YGC的频率越小，但是YGC STW停顿时间越长

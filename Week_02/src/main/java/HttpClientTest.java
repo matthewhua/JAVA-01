@@ -16,7 +16,7 @@ public class HttpClientTest {
     //http 请求localhost
     public static void main(String[] args) throws IOException {
         CloseableHttpClient client = HttpClientBuilder.create().build();
-        HttpGet httpGet =new HttpGet("http://localhost:8801");
+        HttpGet httpGet =new HttpGet("http://localhost:8802");
         CloseableHttpResponse response  = client.execute(httpGet);
         System.out.println("响应状态为: " + response.getStatusLine());
         if (response.getEntity() != null)
