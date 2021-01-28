@@ -35,7 +35,7 @@ public class GCLogAnalysis
 				cachedGarbage[randomIndex] = garbage;
 			}
 		}
-		System.out.println("执行结束! 共生成对象次数:" + counter.longValue());
+		System.out.println("执行结束,共生成的垃圾对象为: " + counter.longValue());
 	}
 
 

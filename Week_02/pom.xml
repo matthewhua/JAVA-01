@@ -6,7 +6,11 @@
 
     <groupId>matthew</groupId>
     <artifactId>homework</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>nettyGateWay</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
