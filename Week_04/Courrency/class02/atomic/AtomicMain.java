@@ -1,7 +1,7 @@
 package class02.atomic;
 
-import org.junit.jupiter.api.DynamicTest;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+
 
 /**
  * @author Matthew

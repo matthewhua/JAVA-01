@@ -27,6 +27,7 @@ public class TestHostName
         System.out.println("JVM最大内存: " + runtime.maxMemory() / (8 * 1024 * 1024) + "MB"); //2021 默认启动JVM 为 453 MB
         System.out.println("JVM当前内存: " + runtime.totalMemory());
         System.out.println("JVM空闲内存: " + runtime.freeMemory());
+
     }
 
 }

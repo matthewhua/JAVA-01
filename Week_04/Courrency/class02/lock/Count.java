@@ -11,13 +11,17 @@ public class Count
 	final ReentrantLock lock = new ReentrantLock(false);
 
 
-	public void get() throws InterruptedException
+	public void get()
 	{
-		lock.lock(); // 上锁
-		System.out.println(Thread.currentThread().getName() + " get begin");
-		Thread.sleep(1000);
-		System.out.println(Thread.currentThread().getName() + " get end");
-		lock.unlock();
+		try {
+			lock.lock(); // 上锁
+			System.out.println(Thread.currentThread().getName() + " get begin");
+			Thread.sleep(1000);
+			System.out.println(Thread.currentThread().getName() + " get end");
+			lock.unlock();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void put() throws InterruptedException

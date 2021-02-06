@@ -10,19 +10,23 @@ public class ReentrantLockDemo
 	{
 		final Count count = new Count();
 
-		for (int i = 0; i < 3; i++)
-		{
-			new Thread(){
-				@Override public void run()
-				{
-					super.run();
+		for (int i = 0; i < 2; i++) {
+			new Thread() {
+				public void run() {
+					count.get();
 				}
 			}.start();
 		}
 
-		for (int i = 0; i < 3; i++)
+		for (int i = 0; i < 2; i++)
 		{
-			new Thread(() -> )
+			new Thread(() -> {
+				try {
+					count.put();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}).start();
 		}
 	}
 }
