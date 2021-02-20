@@ -12,6 +12,6 @@ public class NettyServerApplication
 	public static void main(String[] args)
 	{
 		String proxyPort = System.getProperty("proxyPort", "8888");
-		Boot
+
 	}
 }
