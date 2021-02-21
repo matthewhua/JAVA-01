@@ -18,6 +18,9 @@ package SpringJDBC.entity;
 
 
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.core.io.Resource;
 
@@ -33,97 +36,18 @@ import java.util.Properties;
  * @author Matthew
  * @since
  */
-public class User implements BeanNameAware {
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class User {
+	private long id;
+	private String name;
+	private int age;
 
-    private Long id;
-
-    private String name;
-
-
-    private Company company;
-
-    private Properties context;
-
-    private String contextAsText;
-
-    /**
-     * 当前 Bean 的名称
-     */
-    private transient String beanName;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+	public User(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
 
 
-
-    public Company getCompany() {
-        return company;
-    }
-
-    public void setCompany(Company company) {
-        this.company = company;
-    }
-
-    public static User createUser() {
-        User user = new User();
-        user.setId(1L);
-        user.setName("Matthew");
-        return user;
-    }
-
-    @PostConstruct
-    public void init() {
-        System.out.println("User Bean [" + beanName + "] 初始化...");
-    }
-
-    @PreDestroy
-    public void destroy() {
-        System.out.println("User Bean [" + beanName + "] 销毁中...");
-    }
-
-    @Override
-    public void setBeanName(String name) {
-        this.beanName = name;
-    }
-
-    public Properties getContext() {
-        return context;
-    }
-
-    public void setContext(Properties context) {
-        this.context = context;
-    }
-
-    public String getContextAsText() {
-        return contextAsText;
-    }
-
-    public void setContextAsText(String contextAsText) {
-        this.contextAsText = contextAsText;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", company=" + company +
-                ", context=" + context +
-                ", contextAsText='" + contextAsText + '\'' +
-                ", beanName='" + beanName + '\'' +
-                '}';
-    }
 }

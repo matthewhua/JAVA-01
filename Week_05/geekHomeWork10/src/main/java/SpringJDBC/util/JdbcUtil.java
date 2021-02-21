@@ -26,6 +26,8 @@ public class JdbcUtil {
     private  String userName;
     @Value( "${jdbc.mysql.password}")
     private  String passWord;
+
+
     @PostConstruct
     public void initJdbcDriver(){
         try {

@@ -1,6 +1,6 @@
 package io.matthew.autoConfig;
 
-import io.kimmking.spring01.Student;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

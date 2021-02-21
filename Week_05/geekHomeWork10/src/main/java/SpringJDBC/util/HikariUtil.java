@@ -1,6 +1,9 @@
 package SpringJDBC.util;
 
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
@@ -13,8 +16,9 @@ import java.sql.*;
  * @author Matthew
  * @date 2021-02-21 2:08
  */
-@Repository
+@Component
 public class HikariUtil {
+
     @Value("${jdbc.mysql.url}")
     private  String url;
     @Value("${jdbc.mysql.username}")
@@ -22,6 +26,7 @@ public class HikariUtil {
     @Value("${jdbc.mysql.password}")
     private  String passWord;
     private HikariDataSource hikariDataSource;
+
     @PostConstruct
     public void initJdbcDriver(){
         HikariConfig hikariConfig = new HikariConfig();
