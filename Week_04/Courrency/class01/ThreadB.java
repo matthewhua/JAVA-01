@@ -27,5 +27,6 @@ public class ThreadB implements Runnable
 		System.out.println("返回当前线程" + currentThreadName + "是否处于活跃状态: " + currentThread.isAlive());
 		System.out.println("返回当前线程" + currentThreadName + "是否为守护线程 :" + currentThread.isDaemon());
 		System.out.println("返回当前线程" + currentThreadName + "是否是中断 :" + currentThread.isInterrupted());
+		//System.out.println("返回当前线程" + currentThreadName + "线程的大小 :" + currentThread.getSt());
 	}
 }
