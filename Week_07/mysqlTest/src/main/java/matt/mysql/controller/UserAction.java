@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -27,7 +28,7 @@ public class UserAction {
     @RequestMapping(value = "/addUser", method = RequestMethod.POST)
     public int[] addBatchOrderInfo(@RequestBody User orderInfo){
         try {
-            List<User> orderInfoList = new LinkedList<>();
+            List<User> orderInfoList = new ArrayList<>();
             for(int i=0;i<1000000;i++){
                 orderInfoList.add(orderInfo);
             }

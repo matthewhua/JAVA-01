@@ -24,7 +24,7 @@ public class Swagger {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.hf"))
+                .apis(RequestHandlerSelectors.basePackage("matt.mysql"))
                 .paths(PathSelectors.any())
                 .build();
     }

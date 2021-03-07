@@ -5,7 +5,7 @@
  [主要地址](geekHomeWork9/src/main/java/io/matthew/homework)
 
 #### 第10课
-> （必做）给前面课程提供的 Student/Klass/School 实现自动配置和 Starter。
+> （必做）给前面课程提供的 entity.Student/Klass/School 实现自动配置和 Starter。
 >[代码地址](geekHomeWork10/src\main\java\io\matthew\autoConfig)
 >
 （必做）研究一下 JDBC 接口和数据库连接池，掌握它们的设计和用法：

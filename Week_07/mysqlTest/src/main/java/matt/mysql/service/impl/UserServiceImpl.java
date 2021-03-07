@@ -40,12 +40,12 @@ public class UserServiceImpl implements UserService {
     public int[] addBatchUser(List<User> users) {
         System.out.println("开始操作入库。。。");
         ExecutorService service = Executors.newCachedThreadPool();
-        String sql = "insert into user(nickname, PassWord) values (:nickname, :PassWord)";
+        String sql = "insert into user(nickname, PassWord) values (:nickname, :password)";
         long start = System.currentTimeMillis();
         Future<int[]> future = service.submit(() -> {
             System.out.println("开始执行");
             int[] result = namedParameterJdbcTemplate.batchUpdate(sql, SqlParameterSourceUtils.createBatch(users));
-            System.out.println("执行结束。。。" + (System.currentTimeMillis() - start));
+            System.out.println("执行结束。。。" + (System.currentTimeMillis() - start) / 1000 + "秒");
             return result;
         });
         int[] exeResult = null;

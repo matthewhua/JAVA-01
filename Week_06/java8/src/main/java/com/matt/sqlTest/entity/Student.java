@@ -1,3 +1,5 @@
+package com.matt.sqlTest.entity;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;

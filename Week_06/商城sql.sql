@@ -1,4 +1,4 @@
-DROP TABLE User;
+DROP TABLE if exists User ;
 CREATE TABLE User(
     UUId BIGINT NOT NULL   COMMENT '用户Id 用户ID' ,
     nickname VARCHAR(32)    COMMENT '用户昵称 用户昵称' ,
@@ -11,7 +11,7 @@ CREATE TABLE User(
 
 ALTER TABLE User COMMENT 'user';
 
-DROP TABLE commodity;
+DROP TABLE if exists commodity;
 CREATE TABLE commodity(
     UUID BIGINT    COMMENT 'UUID' ,
     type VARCHAR(32)    COMMENT '商品类型 商品类型' ,
