@@ -1,0 +1,21 @@
+server:
+  port: 8800
+
+spring:
+  application:
+    name: RedisDemo
+  redis:
+    database: 2
+    host: 192.168.31.85
+    port: 7788
+    password: xxxx
+    timeout: 5000 # 连接超时时间（毫秒）
+    #    management:
+    #      health:
+    #        redis:
+    #          enabled: false
+    lettuce:
+      pool:
+        max-idle: 15
+        max-active: 15
+        max-wait: 1000
