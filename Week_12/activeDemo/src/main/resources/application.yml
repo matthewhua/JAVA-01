@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: redis
+  activemq:
+    user: admin
+    password: admin
+    broker-url: tcp://118.178.84.162:61616
+    pool:
+      enabled: true
+      max-connections: 10
