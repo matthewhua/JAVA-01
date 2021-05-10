@@ -41,8 +41,8 @@
 ### 1.4 JVM的GC
 
 #### 1.4.1 GC的背景与一般原理
+![让人](image-20210509205026222.png)
 
-<img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210509204824664.png" alt="image-20210509204824664" style="zoom:33%;" />
 
 #### 1.4.2 Java 目前支持的所有 GC 算法
 
@@ -61,12 +61,12 @@
 
 #### 2.1 IO模型
 
-<img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210509210626864.png" alt="image-20210509210626864" style="zoom:50%;" />
 
+![](image-20210509210626864.png)
 NIO 可以是 new IO 或者NON BLOCKING IO。 而在java 中目前最火和性能最好IO 框架就是 Netty.而netty 目前的使用最经典的就是I/O 复用模型，所以下面是经典reactor 模型，接收和发送信号的流程图
 
-<img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210509211954230.png" alt="image-20210509211954230" style="zoom:67%;" />
 
+![ss](image-20210509211954230.png)
 > ### 大话解释
 >
 > • 同步阻塞 直接排队，别的啥也干不成，直到 轮到你使用打印机了，自己打印文件 
@@ -119,14 +119,14 @@ NIO 可以是 new IO 或者NON BLOCKING IO。 而在java 中目前最火和性�
 - 发送消息方式：channelFuture.channel().writeAndFlush(request)或在handler的ChannelHandlerContext中
 
 目前我所在的游戏服务器就使用了Netty 作为网络通信工具
+![学习](image-20210509213103378.png)
 
-<img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210509213103378.png" alt="image-20210509213103378" style="zoom: 67%;" />
 
 ### 并发编程
 
 
 
-[并发编程思维导图](Java%20Concurrency.xmind) ** 这个更详细哦 **
+[并发编程思维导图](Java%20Concurrency.xmind) **这个更详细哦**
 
 - 并发编程三要素
 
